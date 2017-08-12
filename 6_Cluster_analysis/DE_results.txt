@@ -1,0 +1,16 @@
+% latex table generated in R 3.3.1 by xtable 1.8-2 package
+% Sat Aug 12 13:18:15 2017
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrrrrrr}
+  \hline
+ & Union\_first & SPD\_first & Linke\_first & Gruene\_first & FDP\_first & AFD\_first \\ 
+  \hline
+DE\_ward.D & -0.69 & 0.86 & 0.59 & 0.59 & 0.54 & 0.52 \\ 
+  DE\_ward.D2 & -0.24 & 0.75 & 0.39 & -0.69 & -0.38 & 0.30 \\ 
+  DE\_ward.D\_majority & -0.41 & 0.64 & 0.44 & 0.44 & 0.45 & 0.65 \\ 
+  DE\_ward.D2\_majority & -0.24 & 0.57 & 0.09 & -0.45 & -0.35 & 0.50 \\ 
+  DE\_complete\_majority & -0.13 & 0.34 & -0.23 & -0.23 & -0.15 & 0.25 \\ 
+   \hline
+\end{tabular}
+\end{table}

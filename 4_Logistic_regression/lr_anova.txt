@@ -1,0 +1,73 @@
+% latex table generated in R 3.3.1 by xtable 1.8-2 package
+% Sat Aug 12 13:31:03 2017
+\begin{table}[ht]
+\centering
+\begin{tabular}{lrrr}
+  \hline
+ & Deviance & Resid. Dev & Pr($>$Chi) \\ 
+  \hline
+NULL &  & 1278.43 &  \\ 
+  X.dem..age & 32.28 & 1246.16 & 0.0000 \\ 
+  X.dem..gender & 11.00 & 1235.16 & 0.0009 \\ 
+  X.dem..education\_level & 7.29 & 1227.86 & 0.1212 \\ 
+  X.dem..degree\_of\_urbanisation & 5.22 & 1222.65 & 0.0224 \\ 
+  X.dem..settlement\_size & 11.47 & 1211.18 & 0.1194 \\ 
+  X.dem..religion & 38.82 & 1172.35 & 0.0000 \\ 
+  X.dem..employment\_status & 49.95 & 1122.41 & 0.0000 \\ 
+  X.dem..work\_type\_routine & 10.11 & 1112.30 & 0.0386 \\ 
+  X.dem..work\_type\_manual & 3.46 & 1108.84 & 0.4844 \\ 
+  X.dem..income\_net\_monthly & 17.50 & 1091.34 & 0.1316 \\ 
+  X.dem..disposable\_income & 4.92 & 1086.42 & 0.4259 \\ 
+  X.dem..financial\_security & 9.38 & 1077.04 & 0.0524 \\ 
+  X.dem..status\_national\_economy & 24.79 & 1052.25 & 0.0002 \\ 
+  X.dem..change\_economy\_country\_past12months & 16.12 & 1036.13 & 0.0065 \\ 
+  X.dem..economy\_country\_next12months & 139.55 & 896.58 & 0.0000 \\ 
+  X.question..opinion\_government & 22.20 & 874.38 & 0.0002 \\ 
+  X.question..political\_view & 17.85 & 856.52 & 0.0031 \\ 
+  X.question..frequency\_of\_voting & 81.10 & 775.42 & 0.0000 \\ 
+  X.question..vote\_next\_national\_election & 16.49 & 758.92 & 0.0024 \\ 
+  X.question..frequent\_sharing\_of\_politicalviews & 5.83 & 753.10 & 0.2124 \\ 
+  X.question..independence\_or\_respect & 1.90 & 751.19 & 0.3862 \\ 
+  X.question..obedience\_or\_selfreliance & 0.44 & 750.76 & 0.8036 \\ 
+  X.question..consideration\_or\_good\_behaviour & 1.22 & 749.54 & 0.5443 \\ 
+  X.question..curiosity\_or\_good\_manners & 8.42 & 741.12 & 0.0148 \\ 
+  X.question..democracy\_own\_country\_satisfaction & 2.72 & 738.39 & 0.4363 \\ 
+  X.question..next\_generation\_opportunities & 32.89 & 705.51 & 0.0000 \\ 
+  X.question..currentplace\_change\_past5years & 17.97 & 687.54 & 0.0030 \\ 
+  X.question..country\_direction\_past5years & 23.01 & 664.52 & 0.0001 \\ 
+  X.question..international\_trade\_gain\_or\_loss & 12.26 & 652.26 & 0.0155 \\ 
+  X.question..country\_comes\_first & 9.09 & 643.18 & 0.0589 \\ 
+  X.question..improving\_life\_by\_hardwork & 1.41 & 641.76 & 0.8423 \\ 
+  X.question..conspiracy & 6.58 & 635.18 & 0.1597 \\ 
+  X.question..government\_controlled\_by\_elite & 12.07 & 623.11 & 0.0168 \\ 
+  X.question..trust\_in\_own\_judgment & 10.20 & 612.91 & 0.0371 \\ 
+  X.question..perceived\_effect\_of\_diversity & 8.35 & 604.56 & 0.0796 \\ 
+  X.question..gender\_discrimination\_importance & 29.59 & 574.97 & 0.0000 \\ 
+  X.question..worldview & 11.22 & 563.75 & 0.0008 \\ 
+  social\_media\_dummy\_1 & 4.97 & 558.78 & 0.0258 \\ 
+  social\_media\_dummy\_5 & 0.99 & 557.79 & 0.3193 \\ 
+  social\_media\_dummy\_6 & 3.69 & 554.10 & 0.0549 \\ 
+  social\_media\_dummy\_14 & 13.22 & 540.88 & 0.0003 \\ 
+  member\_sports & 0.48 & 540.40 & 0.4889 \\ 
+  member\_party & 8.35 & 532.04 & 0.0038 \\ 
+  member\_church & 0.37 & 531.67 & 0.5415 \\ 
+  member\_none & 4.10 & 527.57 & 0.0429 \\ 
+  importance\_dummy\_1 & 0.54 & 527.03 & 0.4620 \\ 
+  importance\_dummy\_3 & 3.74 & 523.29 & 0.0531 \\ 
+  importance\_dummy\_4 & 0.05 & 523.24 & 0.8254 \\ 
+  importance\_dummy\_5 & 14.39 & 508.85 & 0.0001 \\ 
+  importance\_dummy\_6 & 0.80 & 508.06 & 0.3717 \\ 
+  importance\_dummy\_10 & 2.32 & 505.74 & 0.1281 \\ 
+  importance\_dummy\_11 & 10.54 & 495.20 & 0.0012 \\ 
+  importance\_dummy\_16 & 0.97 & 494.24 & 0.3258 \\ 
+  mind\_first & 1.78 & 492.46 & 0.1823 \\ 
+  experience\_first & 5.00 & 487.45 & 0.0253 \\ 
+  change\_first & 6.05 & 481.41 & 0.0139 \\ 
+  people\_first & 0.81 & 480.60 & 0.3675 \\ 
+  mind\_second & 0.02 & 480.57 & 0.8770 \\ 
+  experience\_second & 1.86 & 478.71 & 0.1729 \\ 
+  solution\_second & 1.67 & 477.04 & 0.1961 \\ 
+  people\_second & 0.00 & 477.04 & 0.9958 \\ 
+   \hline
+\end{tabular}
+\end{table}
