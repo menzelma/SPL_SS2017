@@ -1,21 +1,17 @@
-Name of Quantlet:  MVAreturns
+Name of Quantlet:  SPL_Preprocessing
  
-Published in:      Applied Multivariate Statistical Analysis
+Published in:      Statistical programming languages - Student Project on ...
   
-Description:       Shows monthly returns of six US firms from Jan 2000 to Dec 2009.
+Description:       Feature extraction and adjustment of measurement levels.
  
-Keywords:          financial, portfolio, returns, asset, time-series, plot
+Keywords:          preprocessing, pattern matching, imputation, feature extraction
 
-See also:          MVAportfol_IBM_Ford, MVAportfol_IBM_PanAm
+See also:          SPL_Descriptive_analysis, SPL_X2, SPL_Logistic_regression, SPL_Clustering, SPL_Cluster_analysis
 
-Author:            Zografia Anastasiadou
+Author:            Katja Kischisch, Frank Leonel Toko, Matthias Menzel
   
-Submitted:         Fri, August 05 2011 by Awdesch Melzer
+Submitted:         Fri, August 13 2017 by Awdesch Melzer
   
-Datafile:          apple.csv, bac.csv, ed.csv, ford.csv, ibm.csv, ms.csv
+Datafile:          data_coded_e28.csv, data_coded_US.csv 
   
-Input:  
-  
-Output:  
-  
-Example:  
+Output:            cluster_data.rds, data_pre.rds, DE_pre.rds, eur_pre.rds, FR_pre.rds, GB_pre.rds, us_pre.rds
