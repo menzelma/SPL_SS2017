@@ -1,21 +1,15 @@
-Name of Quantlet:  MVAreturns
+Name of Quantlet:  SPL_Descriptive_analysis
  
-Published in:      Applied Multivariate Statistical Analysis
+Published in:      Statistical programming languages - Student Project on ...
   
-Description:       Shows monthly returns of six US firms from Jan 2000 to Dec 2009.
+Description:       Descriptive analysis of US survey data.
  
-Keywords:          financial, portfolio, returns, asset, time-series, plot
+Keywords:          barplot, mosaic plot, descriptive analysis, probability table
 
-See also:          MVAportfol_IBM_Ford, MVAportfol_IBM_PanAm
+See also:          SPL_Preprocessing, SPL_X2, SPL_Logistic_regression, SPL_Clustering, SPL_Cluster_analysis
 
-Author:            Zografia Anastasiadou
+Author:            Katja Kischisch, Frank Leonel Toko, Matthias Menzel
   
-Submitted:         Fri, August 05 2011 by Awdesch Melzer
+Submitted:         Fri, August 13 2017 by Matthias Menzel
   
-Datafile:          apple.csv, bac.csv, ed.csv, ford.csv, ibm.csv, ms.csv
-  
-Input:  
-  
-Output:  
-  
-Example:  
+Datafile:          us_pre.rds, codebook.csv
