@@ -10,7 +10,7 @@ See also:          SPL_Preprocessing, SPL_Descriptive_analysis, SPL_Logistic_reg
 
 Author:            Katja Kischisch, Frank Leonel Toko, Matthias Menzel
   
-Submitted:         Fri, August 13 2017 by Matthias Menzel
+Submitted:         Fri, August 18 2017 by Matthias Menzel
   
 Datafile:          us_pre.rds
   
