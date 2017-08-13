@@ -1,11 +1,9 @@
 ############################################################################### 
 ####-Analysis of Cluster Results R-File-#######################################
 ############################################################################### 
-
-# load packages
+#load packages
 if (!require("boot")) install.packages("boot")
-library(boot)
-
+if (!require("xtable")) install.packages("xtable")
 # set working directory
 setwd("D:/Uni/SoSe2017/Statistical Programming Languages/Project")
 
@@ -17,14 +15,14 @@ dt_clust = readRDS("Cluster.rds")
 trump_complete = readRDS("trump_complete.rds")
 trump_ward.D = readRDS("trump_ward.D.rds")
 trump_ward.D2 = readRDS("trump_ward.D2.rds")
-sz_complete = readRDS("sq_complete.rds")
+sz_complete = readRDS("sz_complete.rds")
 sz_ward.D = readRDS("sz_ward.D.rds")
 sz_ward.D2 = readRDS("sz_ward.D2.rds")
 
 # Create data sets with for each country
 party_DE = dt_DE[, c(126:131)]
 party_FR = dt_FR[, c(126:132)]
-party_GB = dt_FR[, c(127:132)]
+party_GB = dt_GB[, c(127:132)]
 # Split Cluster indices in one data set per country
 DE_clust = dt_clust[c(min(dt_DE$ID):max(dt_DE$ID)), ]
 FR_clust = dt_clust[c(min(dt_FR$ID):max(dt_FR$ID)), ]
@@ -57,6 +55,7 @@ proportions = function(col_nr_clust, trump_prop, sz, dt_clust. = dt_clust, DE_cl
         if (sum(GB_clust.[, col_nr_clust] == i) > 0) {
             df[i, 4] = (sum(party_GB$UKIP_first[GB_clust.[, col_nr_clust] == i] == 1)/sum(GB_clust.[, col_nr_clust] == i))/UKIP_prop
         } else {
+            
             df[i, 4] = 0
         }
         df[i, 5] = (sz[nr_clust, i]/(1/nr_clust))
@@ -65,13 +64,11 @@ proportions = function(col_nr_clust, trump_prop, sz, dt_clust. = dt_clust, DE_cl
     return(df)
 }
 
-result_ward.D_1 = proportions(2, trump_ward.D, sz_ward.D)
-result_ward.D_2 = proportions(3, trump_ward.D, sz_ward.D)
-result_ward.D2_1 = proportions(4, trump_ward.D2, sz_ward.D2)
-result_ward.D2_2 = proportions(5, trump_ward.D2, sz_ward.D2)
-result_ward.D_majority = proportions(6, trump_ward.D, sz_ward.D)
-result_ward.D2_majority = proportions(7, trump_ward.D2, sz_ward.D2)
-result_complete_majority = proportions(8, trump_complete, sz_complete)
+result_ward.D = proportions(2, trump_ward.D, sz_ward.D)
+result_ward.D2 = proportions(3, trump_ward.D2, sz_ward.D2)
+result_ward.D_majority = proportions(4, trump_ward.D, sz_ward.D)
+result_ward.D2_majority = proportions(5, trump_ward.D2, sz_ward.D2)
+result_complete_majority = proportions(6, trump_complete, sz_complete)
 
 ############################################################################### 
 ####-Plot proportions of AFD/FN/UKIP voters in the cluster-####################
@@ -80,15 +77,15 @@ result_complete_majority = proportions(8, trump_complete, sz_complete)
 plot_result = function(res, title) {
     res = res[order(res[, 1]), ]
     plot(res[, 1], type = "o", col = "black", ylim = c(0, max(res[, c(1:4)]) + 1), ylab = "Noramlized proportions of party voters", main = title, 
-        xlab = "Cluster Nr. with ascending proportions of Trump voters in cluster")
-    points(res[, 2], type = "o", col = "red")
-    points(res[, 3], type = "o", col = "blue")
-    points(res[, 4], type = "o", col = "green")
-    legend(1, max(res[, c(1:4)]) + 1, colnames(res[, c(1:4)]), pch = c(1, 1, 1, 1), lty = c(1, 1, 1, 1), col = c("black", "red", "blue", "green"))
+        xlab = "Cluster Nr. with ascending proportions of Trump voters in cluster", lty = 1)
+    points(res[, 2], type = "o", col = "red", lty = 3)
+    points(res[, 3], type = "o", col = "blue", lty = 4)
+    points(res[, 4], type = "o", col = "green3", lty = 5)
+    legend(1, max(res[, c(1:4)]) + 1, colnames(res[, c(1:4)]), pch = c(1, 1, 1, 1), lty = c(1, 3, 4, 5), col = c("black", "red", "blue", "green3"))
 }
 
-plot_result(result_ward.D_2, "ward.D with 5 clusters")
-plot_result(result_ward.D2_2, "ward.D2 with 4 clusters")
+plot_result(result_ward.D, "ward.D with 5 clusters")
+plot_result(result_ward.D2, "ward.D2 with 4 clusters")
 plot_result(result_ward.D_majority, "ward.D with 9 clusters")
 plot_result(result_ward.D2_majority, "ward.D2 with 7 clusters")
 plot_result(result_complete_majority, "complete with 18 clusters")
@@ -110,8 +107,10 @@ correl = function(res1, res2, res3, res4, res5) {
     return(df)
 }
 
-correl(result_ward.D_2, result_ward.D2_2, result_ward.D_majority, result_ward.D2_majority, result_complete_majority)
-
+populist_results = correl(result_ward.D, result_ward.D2, result_ward.D_majority, result_ward.D2_majority, result_complete_majority)
+sink("populist_results.txt")
+xtable(populist_results)
+sink()
 ############################################################################### 
 ####-Computes proportions of voters in one country in the cluster-#############
 ############################################################################### 
@@ -125,7 +124,6 @@ proportions_country = function(col_nr_clust, trump_prop, sz, country_clust, coun
         for (j in 1:dim(country_dt)[2]) {
             if (sum(country_clust[, col_nr_clust] == i) > 0) {
                 df[i, j + 1] = (sum(country_dt[country_clust[, col_nr_clust] == i, j] == 1)/sum(country_clust[, col_nr_clust] == i))
-                print(df[i, j + 1])
             } else {
                 df[i, j + 1] = 0
             }
@@ -137,14 +135,13 @@ proportions_country = function(col_nr_clust, trump_prop, sz, country_clust, coun
     return(df)
 }
 
-DE_ward.D_1 = proportions_country(2, trump_ward.D, sz_ward.D, DE_clust, party_DE)
-DE_ward.D_2 = proportions_country(3, trump_ward.D, sz_ward.D, DE_clust, party_DE)
-DE_ward.D2_1 = proportions_country(4, trump_ward.D2, sz_ward.D2, DE_clust, party_DE)
-DE_ward.D2_2 = proportions_country(5, trump_ward.D2, sz_ward.D2, DE_clust, party_DE)
-DE_ward.D_majority = proportions_country(6, trump_ward.D, sz_ward.D, DE_clust, party_DE)
-DE_ward.D2_majority = proportions_country(7, trump_ward.D2, sz_ward.D2, DE_clust, party_DE)
-DE_complete_majority = proportions_country(8, trump_complete, sz_complete, DE_clust, party_DE)
+DE_ward.D = proportions_country(2, trump_ward.D, sz_ward.D, DE_clust, party_DE)
+DE_ward.D2 = proportions_country(3, trump_ward.D2, sz_ward.D2, DE_clust, party_DE)
+DE_ward.D_majority = proportions_country(4, trump_ward.D, sz_ward.D, DE_clust, party_DE)
+DE_ward.D2_majority = proportions_country(5, trump_ward.D2, sz_ward.D2, DE_clust, party_DE)
+DE_complete_majority = proportions_country(6, trump_complete, sz_complete, DE_clust, party_DE)
 
+#Computes weighted correaltion between proportions of voters for all parties in Germany vs. Trump voters
 correl_DE = function(res1, res2, res3, res4, res5) {
     df = data.frame(matrix(nrow = 5, ncol = 6))
     colnames(df) = colnames(party_DE)
@@ -162,5 +159,8 @@ correl_DE = function(res1, res2, res3, res4, res5) {
     print("Correlations")
     return(df)
 }
-correl_DE(DE_ward.D_2, DE_ward.D2_2, DE_ward.D_majority, DE_ward.D2_majority, DE_complete_majority)
 
+DE_results = correl_DE(DE_ward.D, DE_ward.D2, DE_ward.D_majority, DE_ward.D2_majority, DE_complete_majority)
+sink("DE_results.txt")
+xtable(DE_results)
+sink()

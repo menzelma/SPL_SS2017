@@ -1,13 +1,11 @@
 ############################################################################### 
 ####-Clustering R-File-########################################################
 ############################################################################### 
-
-# Check if required packages are installed
+#Script needs some time to run(~2 minutes on i7 with 16GB RAM) 
+#Load packages
 if (!require("cluster")) install.packages("cluster")
 if (!require("fastcluster")) install.packages("fastcluster")
-# Load packages
-library(cluster)
-library(fastcluster)
+
 # Set Working directory
 setwd("D:/Uni/SoSe2017/Statistical Programming Languages/Project")
 
@@ -72,15 +70,16 @@ sz_test = function(clustersize) {
     return(vec)
 }
 
-plot(sz_test(sz_single), type = "o", ylim = c(0, 1), xlim = c(1, 25), col = "orange3", xlab = "Nr. of cluster", ylab = "Max. clustersize")
+plot(sz_test(sz_single), type = "o", ylim = c(0, 1), xlim = c(1, 25), col = "orange3", xlab = "Nr. of cluster", ylab = "Max. clustersize", 
+    lty = 3, lwd = 2)
 lines(sz_test(sz_complete), type = "o", col = "black")
-lines(sz_test(sz_average), type = "o", col = "aquamarine")
-lines(sz_test(sz_centroid), type = "o", col = "darkorchid")
-lines(sz_test(sz_mcquitty), type = "o", col = "green")
-lines(sz_test(sz_ward.D), type = "o", col = "blue")
-lines(sz_test(sz_ward.D2), type = "o", col = "red")
-legend(20.5, 0.8, c("single", "complete", "average", "centroid", "mcquitty", "ward.D", "ward.D2"), pch = c(1, 1, 1, 1, 1, 1, 1), lty = c(1, 
-    1, 1, 1, 1, 1, 1), col = c("orange3", "black", "aquamarine", "darkorchid", "green", "red", "blue"))
+lines(sz_test(sz_average), type = "o", col = "aquamarine", lty = 5)
+lines(sz_test(sz_centroid), type = "o", col = "darkorchid", lty = 4)
+lines(sz_test(sz_mcquitty), type = "o", col = "green3")
+lines(sz_test(sz_ward.D), type = "o", col = "blue", lty = 3)
+lines(sz_test(sz_ward.D2), type = "o", col = "red", lty = 5)
+legend(20.5, 0.8, c("single", "complete", "average", "centroid", "mcquitty", "ward.D", "ward.D2"), pch = c(1, 1, 1, 1, 1, 1, 1), lty = c(3, 
+    1, 5, 4, 1, 3, 5), col = c("orange3", "black", "aquamarine", "darkorchid", "green3", "red", "blue"))
 
 ############################################################################### 
 ####-How many Trump voters in Us Data?-########################################
@@ -141,25 +140,13 @@ metric_ward.D2 = trump_metric(trump_ward.D2, sz_ward.D2)
 plot(metric_complete, type = "o", ylim = c(0, max(metric_complete, metric_ward.D, metric_ward.D2) + 0.001), ylab = "Metric", xlab = "Nr. of cluster", 
     main = "Comparison of metric for
      different methods and amount of clusters")
-points(metric_ward.D, col = "red", type = "o")
-points(metric_ward.D2, col = "blue", type = "o")
+points(metric_ward.D, col = "red", type = "o", lty = 3)
+points(metric_ward.D2, col = "blue", type = "o", lty = 5)
 
-legend(15, 0.04, c("complete", "ward.D", "ward.D2"), pch = c(1, 1, 1), lty = c(1, 1, 1), col = c("black", "red", "blue"))
+legend(15, 0.04, c("complete", "ward.D", "ward.D2"), pch = c(1, 1, 1), lty = c(1, 3, 5), col = c("black", "red", "blue"))
 
-# Candidates ward.D 2/3/5, ward.D2 2/4 (local maxima)
-
-############################################################################### 
-####-Find smallest number of Cluster where a majority of Trump Voters occur-###
-############################################################################### 
-
-# trump_majority = function(trump_voters){ size = dim(trump_voters)[1] vec = rep(0,size) for(i in 1:size){ vec[i] =
-# max(trump_voters[i,1:i]) } return(vec) } majority_complete = trump_majority(trump_complete) majority_ward.D =
-# trump_majority(trump_ward.D) majority_ward.D2 = trump_majority(trump_ward.D2) plot(majority_complete,ylab = 'Maximal proportion of Trump
-# voters in a cluster', xlab = 'Nr. of cluster',type = 'o',ylim = c(0.3,1),xlim = c(1,21)) points(majority_ward.D,col='red',type = 'o')
-# points(majority_ward.D2,col='blue',type = 'o') lines(rep(0.5,20),lty=2) legend(1,0.9,c('complete','ward.D','ward.D2','Majority'),
-# lty=c(1,1,1,2),col = c('black','red','blue','black'))
-
-# candidates Complete 2/3/4/5
+# Candidates ward.D 2/3/5, ward.D2 2/4 (local maxima) But the cluster=2 candidates are local maxima because they are by definition better
+# than the first split
 
 ############################################################################### 
 ####-Find largest cluster where majority of Trump voters exists-###############
@@ -219,22 +206,20 @@ trump_barplot(clust_complete, 18)
 ####-Save Candidate Cluster-###################################################
 ############################################################################### 
 
-# Candidates from trump_metric: ward.D k=2/5, ward.D2 k=2/4 Candidates from large_clust_majority: Complete k=18,Ward.D k=9,Ward.D2 k=7
+# Candidates from trump_metric: ward.D k=5, ward.D2 k=4 Candidates from large_clust_majority: Complete k=18,Ward.D k=9,Ward.D2 k=7
 
-ward.D_metric_1 = cutree(clust_ward.D, k = 2)
-ward.D_metric_2 = cutree(clust_ward.D, k = 5)
-ward.D2_metric_1 = cutree(clust_ward.D2, k = 2)
-ward.D2_metric_2 = cutree(clust_ward.D2, k = 4)
+ward.D_metric = cutree(clust_ward.D, k = 5)
+ward.D2_metric = cutree(clust_ward.D2, k = 4)
 ward.D_majority = cutree(clust_ward.D, k = 9)
 ward.D2_majority = cutree(clust_ward.D2, k = 7)
 complete_majority = cutree(clust_complete, k = 18)
 
-out = data.frame(cbind(dt$ID, ward.D_metric_1, ward.D_metric_2, ward.D2_metric_1, ward.D2_metric_2, ward.D_majority, ward.D2_majority, complete_majority))
+out = data.frame(cbind(dt$ID, ward.D_metric, ward.D2_metric, ward.D_majority, ward.D2_majority, complete_majority))
 names(out)[1] = "ID"
 saveRDS(out, "Cluster.rds")
 saveRDS(trump_complete, "trump_complete.rds")
 saveRDS(trump_ward.D, "trump_ward.D.rds")
 saveRDS(trump_ward.D2, "trump_ward.D2.rds")
-saveRDS(sz_complete, "sq_complete.rds")
+saveRDS(sz_complete, "sz_complete.rds")
 saveRDS(sz_ward.D, "sz_ward.D.rds")
 saveRDS(sz_ward.D2, "sz_ward.D2.rds")
