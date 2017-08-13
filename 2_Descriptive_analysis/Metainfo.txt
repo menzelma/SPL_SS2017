@@ -10,6 +10,6 @@ See also:          SPL_Preprocessing, SPL_X2, SPL_Logistic_regression, SPL_Clust
 
 Author:            Katja Kischisch, Frank Leonel Toko, Matthias Menzel
   
-Submitted:         Fri, August 13 2017 by Matthias Menzel
+Submitted:         Fri, August 18 2017 by Matthias Menzel
   
 Datafile:          us_pre.rds, codebook.csv
