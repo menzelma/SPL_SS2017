@@ -10,7 +10,7 @@ See also:          SPL_Descriptive_analysis, SPL_X2, SPL_Logistic_regression, SP
 
 Author:            Katja Kischisch, Frank Leonel Toko, Matthias Menzel
   
-Submitted:         Fri, August 13 2017 by Awdesch Melzer
+Submitted:         Fri, August 13 2017 by Matthias Menzel
   
 Datafile:          data_coded_e28.csv, data_coded_US.csv 
   
