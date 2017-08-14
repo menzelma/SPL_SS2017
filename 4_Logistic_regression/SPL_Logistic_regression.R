@@ -86,21 +86,30 @@ coef_lambda.1se = coef(lasso.cv, s = "lambda.1se")
 lasso_results.min = data.frame(name = coef_lambda.min@Dimnames[[1]][coef_lambda.min@i + 1], coeff.min = coef_lambda.min@x, stringsAsFactors = FALSE)
 lasso_results.1se = data.frame(name = coef_lambda.1se@Dimnames[[1]][coef_lambda.1se@i + 1], coefficient = coef_lambda.1se@x, stringsAsFactors = FALSE)
 
-lasso_results.min$coeff.1se = 0
-rownames(lasso_results.min) = lasso_results.min$name
-for (i in c(1:(dim(lasso_results.1se)[1]))) {
-    check = TRUE
-    cnt = 1
-    while (check == TRUE) {
-        if (lasso_results.1se$name[i] == lasso_results.min$name[cnt]) {
-            lasso_results.min$coeff.1se[cnt] = lasso_results.1se$coefficient[i]
-            check = FALSE
-        } else {
-            cnt = cnt + 1
-        }
+lasso_result = data.frame(name = c(lasso_results.min$name[1], colnames(x_train)), result.min = 0, result.1se = 0, stringsAsFactors = FALSE)
+cnt = 1
+for (i in c(1:177)) {
+    if (lasso_result$name[i] == lasso_results.min$name[cnt]) {
+        lasso_result$result.min[i] = lasso_results.min$coeff.min[cnt]
+        cnt = cnt + 1
     }
+    if (cnt == 81) 
+        break
 }
 
+cnt = 1
+for (i in c(1:177)) {
+    if (lasso_result$name[i] == lasso_results.1se$name[cnt]) {
+        lasso_result$result.1se[i] = lasso_results.1se$coefficient[cnt]
+        cnt = cnt + 1
+    }
+    if (cnt == 53) 
+        break
+}
+
+lasso_result = lasso_result[!(lasso_result$result.min == 0 & lasso_result$result.1se == 0), ]
+rownames(lasso_result) = lasso_result$name
+
 sink("lasso_result.txt", append = FALSE, split = FALSE)
-xtable(lasso_results.min[, c(2, 3)])
+xtable(lasso_result[, c(2, 3)])
 sink()

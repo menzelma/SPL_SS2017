@@ -1,90 +1,91 @@
 % latex table generated in R 3.3.1 by xtable 1.8-2 package
-% Sat Aug 12 13:31:09 2017
+% Mon Aug 14 10:21:53 2017
 \begin{table}[ht]
 \centering
 \begin{tabular}{rrr}
   \hline
- & coeff.min & coeff.1se \\ 
+ & result.min & result.1se \\ 
   \hline
 (Intercept) & -0.65 & -0.39 \\ 
+  X.dem..age & 0.00 & 0.00 \\ 
   X.dem..degree\_of\_urbanisation2 & 0.05 & 0.00 \\ 
-  X.dem..settlement\_size3 & 0.20 & 0.00 \\ 
+  X.dem..settlement\_size3 & 0.20 & 0.07 \\ 
   X.dem..settlement\_size4 & -0.02 & 0.00 \\ 
   X.dem..religion3 & -0.45 & 0.00 \\ 
-  X.dem..religion4 & 0.05 & 0.00 \\ 
+  X.dem..religion4 & 0.05 & 0.01 \\ 
   X.dem..religion7 & 0.00 & 0.00 \\ 
-  X.dem..employment\_status2 & 0.50 & 0.00 \\ 
+  X.dem..employment\_status2 & 0.50 & 0.30 \\ 
   X.dem..employment\_status4 & 0.09 & 0.00 \\ 
-  X.dem..employment\_status6 & -0.41 & 0.00 \\ 
+  X.dem..employment\_status6 & -0.41 & -0.35 \\ 
   X.dem..employment\_status10 & 0.64 & 0.00 \\ 
-  X.dem..work\_type\_routine5 & -0.24 & 0.00 \\ 
+  X.dem..work\_type\_routine5 & -0.24 & -0.04 \\ 
   X.dem..work\_type\_manual2 & 0.09 & 0.00 \\ 
   X.dem..income\_net\_monthly2 & -0.03 & 0.00 \\ 
   X.dem..income\_net\_monthly4 & -0.05 & 0.00 \\ 
-  X.dem..income\_net\_monthly9 & -1.05 & 0.00 \\ 
+  X.dem..income\_net\_monthly9 & -1.05 & -0.18 \\ 
   X.dem..income\_net\_monthly12 & 0.05 & 0.00 \\ 
   X.dem..financial\_security4 & -0.31 & 0.00 \\ 
-  X.dem..status\_national\_economy5 & 0.11 & 0.00 \\ 
+  X.dem..status\_national\_economy5 & 0.11 & 0.01 \\ 
   X.dem..change\_economy\_country\_past12months4 & 0.22 & 0.00 \\ 
-  X.dem..change\_economy\_country\_past12months5 & 0.60 & 0.00 \\ 
-  X.dem..economy\_country\_next12months2 & 0.35 & 0.00 \\ 
+  X.dem..change\_economy\_country\_past12months5 & 0.60 & 0.20 \\ 
+  X.dem..economy\_country\_next12months2 & 0.35 & 0.36 \\ 
   X.dem..economy\_country\_next12months3 & -0.19 & 0.00 \\ 
-  X.dem..economy\_country\_next12months4 & -0.79 & 0.00 \\ 
-  X.dem..economy\_country\_next12months5 & -1.04 & 0.00 \\ 
+  X.dem..economy\_country\_next12months4 & -0.79 & -0.51 \\ 
+  X.dem..economy\_country\_next12months5 & -1.04 & -0.64 \\ 
   X.dem..economy\_country\_next12months6 & -0.05 & 0.00 \\ 
-  X.question..opinion\_government3 & -0.16 & 0.00 \\ 
-  X.question..political\_view3 & -0.03 & 0.00 \\ 
-  X.question..political\_view5 & 0.18 & 0.00 \\ 
-  X.question..political\_view6 & 0.32 & 0.00 \\ 
+  X.question..opinion\_government3 & -0.16 & -0.08 \\ 
+  X.question..political\_view3 & -0.03 & -0.01 \\ 
+  X.question..political\_view5 & 0.18 & 0.07 \\ 
+  X.question..political\_view6 & 0.32 & 0.08 \\ 
   X.question..frequency\_of\_voting2 & -0.01 & 0.00 \\ 
-  X.question..frequency\_of\_voting5 & -1.79 & 0.00 \\ 
-  X.question..frequency\_of\_voting6 & -0.97 & 0.00 \\ 
-  X.question..vote\_next\_national\_election3 & -0.93 & 0.00 \\ 
+  X.question..frequency\_of\_voting5 & -1.79 & -1.40 \\ 
+  X.question..frequency\_of\_voting6 & -0.97 & -0.67 \\ 
+  X.question..vote\_next\_national\_election3 & -0.93 & -0.67 \\ 
   X.question..vote\_next\_national\_election4 & -0.22 & 0.00 \\ 
-  X.question..vote\_next\_national\_election5 & -0.30 & 0.00 \\ 
-  X.question..frequent\_sharing\_of\_politicalviews5 & -0.19 & 0.00 \\ 
-  X.question..curiosity\_or\_good\_manners2 & 0.24 & 0.00 \\ 
-  X.question..next\_generation\_opportunities2 & 0.23 & 0.00 \\ 
-  X.question..next\_generation\_opportunities4 & -0.44 & 0.00 \\ 
+  X.question..vote\_next\_national\_election5 & -0.30 & -0.11 \\ 
+  X.question..frequent\_sharing\_of\_politicalviews5 & -0.19 & -0.09 \\ 
+  X.question..curiosity\_or\_good\_manners2 & 0.24 & 0.12 \\ 
+  X.question..next\_generation\_opportunities2 & 0.23 & 0.26 \\ 
+  X.question..next\_generation\_opportunities4 & -0.44 & -0.16 \\ 
   X.question..next\_generation\_opportunities5 & -0.14 & 0.00 \\ 
   X.question..currentplace\_change\_past5years5 & 0.13 & 0.00 \\ 
   X.question..currentplace\_change\_past5years6 & -0.16 & 0.00 \\ 
-  X.question..country\_direction\_past5years3 & -0.27 & 0.00 \\ 
-  X.question..country\_direction\_past5years4 & -0.14 & 0.00 \\ 
+  X.question..country\_direction\_past5years3 & -0.27 & -0.16 \\ 
+  X.question..country\_direction\_past5years4 & -0.14 & -0.05 \\ 
   X.question..country\_direction\_past5years5 & -0.38 & 0.00 \\ 
-  X.question..international\_trade\_gain\_or\_loss4 & 0.35 & 0.00 \\ 
-  X.question..country\_comes\_first2 & -0.33 & 0.00 \\ 
+  X.question..international\_trade\_gain\_or\_loss4 & 0.35 & 0.13 \\ 
+  X.question..country\_comes\_first2 & -0.33 & -0.07 \\ 
   X.question..improving\_life\_by\_hardwork2 & -0.07 & 0.00 \\ 
   X.question..conspiracy3 & -0.07 & 0.00 \\ 
-  X.question..conspiracy5 & 0.52 & 0.00 \\ 
+  X.question..conspiracy5 & 0.52 & 0.40 \\ 
   X.question..government\_controlled\_by\_elite4 & -0.22 & 0.00 \\ 
-  X.question..government\_controlled\_by\_elite5 & 0.87 & 0.00 \\ 
-  X.question..trust\_in\_own\_judgment2 & 0.10 & 0.00 \\ 
-  X.question..trust\_in\_own\_judgment3 & -0.19 & 0.00 \\ 
+  X.question..government\_controlled\_by\_elite5 & 0.87 & 0.44 \\ 
+  X.question..trust\_in\_own\_judgment2 & 0.10 & 0.11 \\ 
+  X.question..trust\_in\_own\_judgment3 & -0.19 & -0.06 \\ 
   X.question..perceived\_effect\_of\_diversity2 & 0.14 & 0.00 \\ 
-  X.question..gender\_discrimination\_importance2 & 0.30 & 0.00 \\ 
-  X.question..gender\_discrimination\_importance3 & 0.60 & 0.00 \\ 
-  X.question..gender\_discrimination\_importance4 & 0.40 & 0.00 \\ 
-  X.question..worldview2 & -0.62 & 0.00 \\ 
+  X.question..gender\_discrimination\_importance2 & 0.30 & 0.05 \\ 
+  X.question..gender\_discrimination\_importance3 & 0.60 & 0.26 \\ 
+  X.question..gender\_discrimination\_importance4 & 0.40 & 0.04 \\ 
+  X.question..worldview2 & -0.62 & -0.71 \\ 
   social\_media\_dummy\_11 & 0.15 & 0.00 \\ 
   social\_media\_dummy\_51 & 0.01 & 0.00 \\ 
-  social\_media\_dummy\_61 & 0.23 & 0.00 \\ 
-  social\_media\_dummy\_141 & -1.02 & 0.00 \\ 
+  social\_media\_dummy\_61 & 0.23 & 0.09 \\ 
+  social\_media\_dummy\_141 & -1.02 & -0.37 \\ 
   member\_sports1 & -0.03 & 0.00 \\ 
-  member\_party1 & 0.20 & 0.00 \\ 
-  member\_none1 & -0.34 & 0.00 \\ 
-  importance\_dummy\_11 & -0.43 & 0.00 \\ 
-  importance\_dummy\_31 & 0.13 & 0.00 \\ 
-  importance\_dummy\_41 & 0.03 & 0.00 \\ 
-  importance\_dummy\_51 & 0.66 & 0.00 \\ 
-  importance\_dummy\_101 & 0.25 & 0.00 \\ 
-  importance\_dummy\_111 & -0.76 & 0.00 \\ 
-  importance\_dummy\_161 & -0.12 & 0.00 \\ 
-  mind\_first1 & 0.36 & 0.00 \\ 
+  member\_party1 & 0.20 & 0.11 \\ 
+  member\_none1 & -0.34 & -0.27 \\ 
+  importance\_dummy\_11 & -0.43 & -0.32 \\ 
+  importance\_dummy\_31 & 0.13 & 0.02 \\ 
+  importance\_dummy\_41 & 0.03 & 0.04 \\ 
+  importance\_dummy\_51 & 0.66 & 0.63 \\ 
+  importance\_dummy\_101 & 0.25 & 0.19 \\ 
+  importance\_dummy\_111 & -0.76 & -0.67 \\ 
+  importance\_dummy\_161 & -0.12 & -0.01 \\ 
+  mind\_first1 & 0.36 & 0.21 \\ 
   experience\_first1 & 0.08 & 0.00 \\ 
-  people\_first1 & -0.47 & 0.00 \\ 
-  mind\_second1 & -0.13 & 0.00 \\ 
-  experience\_second1 & -0.05 & 0.00 \\ 
+  people\_first1 & -0.47 & -0.46 \\ 
+  mind\_second1 & -0.13 & -0.11 \\ 
+  experience\_second1 & -0.05 & -0.00 \\ 
   solution\_second1 & 0.19 & 0.00 \\ 
    \hline
 \end{tabular}
