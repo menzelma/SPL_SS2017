@@ -48,7 +48,7 @@ dt_common = rbind(dt_usa[, c(1:13, 15:41, 43:68)], dt_eur[, c(1:13, 15:38, 40:42
 ####-Create a proper origin variable-##########################################
 ############################################################################### 
 
-# Set home country to origin as helper if respondent´s immigration response is 4 4 means that the family has been in the country for long
+# Set home country to origin as helper if respondentÂ´s immigration response is 4 4 means that the family has been in the country for long
 # time
 dt_origin = data.frame(dt_common$ID)
 
@@ -195,7 +195,8 @@ rm(frst, snd)
 
 ############################################################################### 
 ####-Combine User Made Data Sets---############################################
-############################################################################### Delete unencoded variables and attach the user created variables to the complete data set
+###############################################################################
+#Delete unencoded variables and attach the user created variables to the complete data set
 dt_common[, c(11, 29, 30, 33, 43:45)] = NULL
 data_preprocessed = cbind(dt_common, dt_origin[, 2], dt_social[, c(2:17)], dt_social_activity[, c(2:11)], dt_member[, c(2:6)], dt_importance[, 
     c(3:18)], dt_leader[, c(2:13)])
