@@ -1,21 +1,17 @@
-Name of Quantlet:  MVAreturns
+Name of Quantlet:  SPL_Clustering
  
-Published in:      Applied Multivariate Statistical Analysis
+Published in:      Statistical programming languages - Student Project on ...
   
-Description:       Shows monthly returns of six US firms from Jan 2000 to Dec 2009.
+Description:       Hierarchical clustering on US and EU data.
  
-Keywords:          financial, portfolio, returns, asset, time-series, plot
+Keywords:          hierarchical clustering, gower, single, complete, average, centroid, mcquitty, ward
 
-See also:          MVAportfol_IBM_Ford, MVAportfol_IBM_PanAm
+See also:          SPL_Preprocessing, SPL_Descriptive_analysis, SPL_X2, SPL_Logistic_regression, SPL_Cluster_analysis
 
-Author:            Zografia Anastasiadou
+Author:            Katja Kischisch, Frank Leonel Toko, Matthias Menzel
   
-Submitted:         Fri, August 05 2011 by Awdesch Melzer
+Submitted:         Fri, August 18 2017 by Matthias Menzel
   
-Datafile:          apple.csv, bac.csv, ed.csv, ford.csv, ibm.csv, ms.csv
+Datafile:          us_pre.rds, cluster_data.rds
   
-Input:  
-  
-Output:  
-  
-Example:  
+Output:            Cluster.rds, sz_complete.rds, sz_ward.D.rds, sz_ward.D2.rds, trump_complete.rds, trump_ward.D.rds, trump_ward.D2.rds
