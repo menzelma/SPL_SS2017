@@ -109,6 +109,7 @@ for (i in c(1:177)) {
 
 lasso_result = lasso_result[!(lasso_result$result.min == 0 & lasso_result$result.1se == 0), ]
 rownames(lasso_result) = lasso_result$name
+lasso_result[,c(2,3)] = exp(lasso_result[,c(2,3)])
 
 sink("lasso_result.txt", append = FALSE, split = FALSE)
 xtable(lasso_result[, c(2, 3)])
