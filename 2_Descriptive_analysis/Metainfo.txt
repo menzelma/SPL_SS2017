@@ -4,7 +4,7 @@ Published in:      Statistical programming languages - Student Project on ...
   
 Description:       Descriptive analysis of US survey data.
  
-Keywords:          barplot, mosaic plot, descriptive analysis, probability table
+Keywords:          plot, visualization, mosaic-plot, descriptive-statistics, histogram
 
 See also:          SPL_Preprocessing, SPL_X2, SPL_Logistic_regression, SPL_Clustering, SPL_Cluster_analysis
 

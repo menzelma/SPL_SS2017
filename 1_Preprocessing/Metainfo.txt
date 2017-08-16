@@ -4,7 +4,7 @@ Published in:      Statistical programming languages - Student Project on ...
   
 Description:       Feature extraction and adjustment of measurement levels.
  
-Keywords:          preprocessing, pattern matching, imputation, feature extraction
+Keywords:          preprocessing
 
 See also:          SPL_Descriptive_analysis, SPL_X2, SPL_Logistic_regression, SPL_Clustering, SPL_Cluster_analysis
 

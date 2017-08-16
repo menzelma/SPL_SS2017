@@ -4,7 +4,7 @@ Published in:      Statistical programming languages - Student Project on ...
   
 Description:       Hierarchical clustering on US and EU data.
  
-Keywords:          hierarchical clustering, gower, single, complete, average, centroid, mcquitty, ward
+Keywords:          clustering, linkage, single linkage, complete linkage, dendrogram, similarity
 
 See also:          SPL_Preprocessing, SPL_Descriptive_analysis, SPL_X2, SPL_Logistic_regression, SPL_Cluster_analysis
 

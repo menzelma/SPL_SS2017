@@ -4,7 +4,7 @@ Published in:      Statistical programming languages - Student Project on ...
   
 Description:       Logistic regression and LASSO on US data.
  
-Keywords:          logistic regression, LASSO
+Keywords:          logit, variable selection, GLM, anova, LASSO, cross-validation
 
 See also:          SPL_Preprocessing, SPL_Descriptive_analysis, SPL_X2, SPL_Clustering, SPL_Cluster_analysis
 

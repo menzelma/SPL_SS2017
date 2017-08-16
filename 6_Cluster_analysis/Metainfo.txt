@@ -4,7 +4,7 @@ Published in:      Statistical programming languages - Student Project on ...
   
 Description:       Analysis of cluster results with weighted correlation coefficient.
  
-Keywords:          weighted correlation, cluster
+Keywords:          correlation, similarity, cluster-analysis
 
 See also:          SPL_Preprocessing, SPL_Descriptive_analysis, SPL_X2, SPL_Logistic_regression, SPL_Clustering
 

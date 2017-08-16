@@ -4,7 +4,7 @@ Published in:      Statistical programming languages - Student Project on ...
   
 Description:       Chi-squared test of independence on US data.
  
-Keywords:          chi-squared test
+Keywords:          chi-square-test, contingency-table
 
 See also:          SPL_Preprocessing, SPL_Descriptive_analysis, SPL_Logistic_regression, SPL_Clustering, SPL_Cluster_analysis
 
