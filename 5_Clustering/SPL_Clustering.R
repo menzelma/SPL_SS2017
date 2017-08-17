@@ -7,7 +7,7 @@ if (!require("cluster")) install.packages("cluster")
 if (!require("fastcluster")) install.packages("fastcluster")
 
 # Set Working directory
-setwd("D:/Uni/SoSe2017/Statistical Programming Languages/Project")
+#setwd("")
 
 # Read the data sets
 dt = readRDS("cluster_data.rds")
