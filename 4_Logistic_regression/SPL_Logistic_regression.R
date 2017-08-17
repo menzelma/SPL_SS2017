@@ -4,7 +4,7 @@
 if (!require("glmnet")) install.packages("glmnet")
 if (!require("xtable")) install.packages("xtable")
 # set working directory
-setwd("D:/Uni/SoSe2017/Statistical Programming Languages/Project")
+#setwd("")
 
 # Read the data
 us_data = readRDS("us_pre.rds")
