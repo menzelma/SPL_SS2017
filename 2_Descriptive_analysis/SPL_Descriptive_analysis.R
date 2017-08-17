@@ -4,7 +4,8 @@
 #Load package
 if (!require("gridExtra")) install.packages("gridExtra")
 
-setwd("D:/Uni/SoSe2017/Statistical Programming Languages/Project")
+#Set working directory
+#setwd("")
 
 # Load the data
 us_data = readRDS("us_pre.rds")
