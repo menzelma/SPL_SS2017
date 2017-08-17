@@ -3,7 +3,7 @@
 ############################################################################### 
 
 # Set working directory
-setwd("D:/Uni/SoSe2017/Statistical Programming Languages/Project")
+#setwd("")
 
 # Read the the two data sets (USA and EU)
 dt_eur = read.csv("data_coded_e28.csv")
