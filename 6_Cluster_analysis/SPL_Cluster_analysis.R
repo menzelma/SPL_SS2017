@@ -5,7 +5,7 @@
 if (!require("boot")) install.packages("boot")
 if (!require("xtable")) install.packages("xtable")
 # set working directory
-setwd("D:/Uni/SoSe2017/Statistical Programming Languages/Project")
+#setwd("")
 
 # Load the data
 dt_DE = readRDS("DE_pre.rds")
